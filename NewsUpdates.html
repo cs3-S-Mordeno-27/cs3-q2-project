@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PSHS CRC - WEBSITE</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A promotional website for PSHS -CRC ">
+    <meta name="keywords" content="Philippine Science High School, Caraga Region, STEM, education">
+    <meta name="author" content="Sasha Mordeno, Jophe Talidong, Clint Celeste">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <section class="NewsUpdates">
+        <nav>
+            <a href="NewsUpdates.html"><img class="logo" src="logo2.png"></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="academics.html">ACADEMICS</a></li>
+                    <li><a href="Campus-life.html">CAMPUS LIFE</a></li>
+                    <li><a href="NewsUpdates.html">NEWS AND UPDATES</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
+        <h1>NEWS AND UPDATES</h1>
+    </section>
+
+    <!---News--->
+
+    <section class="News">
+        <div class="news">
+            <h1> CALENDAR</h1>
+            <img src="calendar1.jpg">
+            <img src="calendar2.jpg">
+            <img src="calendar3.jpg">
+            <img src="calendar4.jpg">
+        </div>
+            <div class="cnt"><h1> Events and updates</h1></div>
+        <div class="slider-container">
+            <div class="slide active">
+                <img src="indak.jpg" alt="Slide 1">
+            </div>
+            <div class="slide">
+                <img src="vaw.jpg" alt="Slide 2">
+            </div>
+            <div class="slide">
+                <img src="STEM.jpg" alt="Slide 3">
+            </div>
+            <div class="slide">
+                <img src="NYSTIF.jpg" alt="Slide 4">
+            </div>
+            <div class="slide">
+                <img src="campaign.jpg" alt="Slide 5">
+            </div>
+            <div class="slide">
+                <img src="kic.jpg" alt="Slide 6">
+            </div>
+            <div class="slide">
+                <img src="students.jpg" alt="Slide 7">
+            </div>
+            <div class="slide">
+                <img src="grassroots.jpg" alt="Slide 8">
+            </div>
+        
+            <div class="slider-navigation">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    const slides = document.querySelectorAll('.slide');
+                    const dots = document.querySelectorAll('.dot');
+        
+                    let currentSlide = 0;
+        
+                    function showSlide(index) {
+                        slides.forEach((slide, i) => {
+                            slide.classList.remove('active');
+                            dots[i].classList.remove('active');
+                        });
+        
+                        slides[index].classList.add('active');
+                        dots[index].classList.add('active');
+                    }
+        
+                    function nextSlide() {
+                        currentSlide = (currentSlide + 1) % slides.length;
+                        showSlide(currentSlide);
+                    }
+        
+                    function prevSlide() {
+                        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                        showSlide(currentSlide);
+                    }
+        
+                    dots.forEach((dot, i) => {
+                        dot.addEventListener('click', () => {
+                            showSlide(i);
+                            currentSlide = i;
+                        });
+                    });
+        
+                    setInterval(nextSlide, 5000); // Change slide every 5 seconds
+                });
+            </script>
+        </div>
+
+        <div class="Newsletters">
+            <h1> Newslettters</h1>
+            <p> (So far)</p>
+                <a href="https://issuu.com/the13thscholars/docs/final-tabloid-with-links"> The Thirteenth Scholars Vol. 1 Issue 1 </a>
+                <a href="https://mb.com.ph/2023/11/10/scholars-showcase-talents-in-dost-s-music-video-competition"> Indak Agham, Himig Kaunlaran </a>
+                <a href="https://medium.com/the-thirteenth-scholars/pshs-crc-holds-orientation-for-s-y-2021-2022-ffc5311994ab"> School Orientation </a>
+                <a href="https://medium.com/the-thirteenth-scholars/tagged/pshs-crc"> The Thirteenth Scholars news and updates </a>
+        </div>
+    </section>
+
+    <!---->
+
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>2023 Philippine Science High School - Caraga Region Campus. All rights reserved.</p>
+        <a href="https://crc.pshs.edu.ph/data-privacy-policy">Privacy Policy</a> <br>
+        <a href="index.html">Back to the Top</a>
+        <p> Copyrighted (Credits) to OFFICIAL PSHS-CRC WEBSITE, 25 Productions, PSHS - CRC Facebook page, <br> Pisay Community Facebook group, Tanya Ancheta, Jophe Talidong and Clint Celeste</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+        </div>
+    </section>

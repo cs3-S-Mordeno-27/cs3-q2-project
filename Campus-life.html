@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> PSHS CRC - WEBSITE</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A promotional website for PSHS -CRC ">
+        <meta name="keywords" content="Philippine Science High School, Caraga Region, STEM, education">
+        <meta name="author" content="Sasha Mordeno, Jophe Talidong, Clint Celeste">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head> 
+
+    <body>
+        <section class="Campus-life"> 
+            <nav>
+                <a href="Campus-life.html"><img class="logo" src="logo2.png"></a>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="academics.html">ACADEMICS</a></li>
+                        <li><a href="Campus-life.html">CAMPUS LIFE</a></li>
+                        <li><a href="NewsUpdates.html">NEWS AND UPDATES</a></li>
+                        <li><a href="contact.html">CONTACT</a></li> 
+                    </ul>
+                </div>
+            </nav>
+            <h1> CAMPUS LIFE</h1>
+        </section>
+
+        <!----Campus Life---->
+
+        <section class="about-us">
+            <div class="campus-life-dropdown">
+                <label for="section-select">SELECT SECTION:</label>
+                <select id="section-select" onchange="changeSection()">
+                    <option value="" selected disabled>Select an option</option>
+                    <option value="student-organizations"><a href="student-organizations.html">Student Organizations</a></option>
+                    <option value="events-and-activities"><a href="events-and-activities.html">Events and Activities</a></option>
+                    <option value="campus-resources"><a href="campus-resources.html">Campus Resources</a></option>
+                </select>
+            </div>
+    
+            <div class="campus-life-content" id="student-organizations">
+                <h1>Student Organizations</h1>
+                <p>List of clubs, organizations, and extracurricular activities. Photos and descriptions of student-led initiatives.</p>
+                <h1> Debate circle</h1>
+                    <img src="debate.jpg">
+                    
+                <h1> Red Cross Youth</h1>
+                    <img src="rcy.jpg">
+                <h1> Sigalab</h1>
+                    <img src="sigalab.jpg">
+                <h1> The 13th Scholars</h1>
+                    <img src="13.jpg">
+                <h1> Model United Nations Organization</h1>
+                    <img src="mun.jpg">
+                <h1> Student Council</h1>
+                    <img src="ss.jpg">
+                <h1> Home Economics</h1>
+                    <p> The Home Economics Club at PSHS - CRC is dedicated to exploring and promoting various aspects of home management and family life. Members engage in activities such as cooking, sewing, and home design. It's a space where students can enhance their practical skills while fostering a sense of community.</p>
+                <h1> Art club</h1>
+                    <p> The Art Club is a vibrant and creative community within PSHS - CRC. Here, students with a passion for the arts come together to express themselves through various mediums. From painting to sculpture, the Art Club encourages artistic exploration and provides a platform for students to showcase their talents.</p>
+                <h1> Glee</h1>
+                    <img src="glee.jpg">
+                <h1> Indoor Sports</h1>
+                    <img src="indoor.jpg">
+            </div>
+    
+            <div class="campus-life-content" id="events-and-activities">
+                <h1>Events and Activities</h1>
+                <p>Calendar of academic and social events. Highlights from past events through images or videos.</p>
+                <img src="1.png">
+                <img src="2.png">
+                <img src="3.png">
+            </div>
+    
+            <div class="campus-life-content" id="campus-resources">
+                <h1>Campus Resources</h1>
+                <p>Information on student services, counseling, and academic support. Health and wellness programs.</p>
+                <div class="resources">
+                    <h1>Student Services</h1>
+                    <p>Our dedicated Student Services team is committed to providing support and guidance to students. Whether you need assistance with academic concerns, personal challenges, or career planning, we're here to help.</p>
+                        <img src="SSD.jpg">
+    
+                    <h1>Counseling Services</h1>
+                    <p>At PSHS - CRC, we prioritize the mental and emotional well-being of our students. Our counseling services offer a safe and confidential space for students to discuss challenges, seek guidance, and develop coping strategies.</p>
+    
+                    <h1>Academic Support</h1>
+                    <p>Excel in your studies with the help of our comprehensive academic support programs. From study resources, we provide the tools and assistance you need to succeed in your academic endeavors.</p>
+    
+                    <h1>Health and Wellness Programs</h1>
+                    <p>Take care of your physical and mental health through our health and wellness programs. Engage in fitness activities, attend wellness workshops, and access resources that promote a healthy and balanced lifestyle.</p>
+                        <img src="mentalHealth.png">
+    
+                </div>
+            </div>
+        </section>
+
+        <!---Footer--->
+
+        <section class="footer">
+            <h4> About Us</h4>
+            <p> 2023 Philippine Science High School - Caraga Region Campus. All rights reserved.</p>
+            <a href="https://crc.pshs.edu.ph/data-privacy-policy"> Privacy Policy</a> <br>
+            <a href="index.html"> Back to the Top</a>
+            <p> Copyrighted (Credits) to OFFICIAL PSHS-CRC WEBSITE, 25 Productions, PSHS - CRC Facebook page, <br> Pisay Community Facebook group, Tanya Ancheta, Jophe Talidong and Clint Celeste</p>
+            <div class="icons">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter"></i>
+            </div>              
+        </section>
+
+        <script>
+            function changeSection() {
+                var selectBox = document.getElementById("section-select");
+                var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+    
+                // Hide all content sections
+                var contentSections = document.querySelectorAll(".campus-life-content");
+                contentSections.forEach(function (section) {
+                    section.style.display = "none";
+                });
+    
+                // Display the selected content section
+                document.getElementById(selectedValue).style.display = "block";
+            }
+        </script>
+    </body>
+</html>  
